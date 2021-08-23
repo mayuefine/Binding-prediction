@@ -5,7 +5,7 @@
 import numpy as np
 from sklearn.externals import joblib
 
-forld = "../Feature_transformation/"
+forld = "../Feature_transformation/seq/"
 model_name = np.loadtxt("models_name.txt", dtype=str)
 mn = list(model_name)
 P_20 = np.loadtxt(forld+"seq_20fet_values1.csv", delimiter = ",")
