@@ -5,14 +5,14 @@
 import numpy as np
 from sklearn.externals import joblib
 
-forld = "./"
+forld = "../Feature_transformation/"
 model_name = np.loadtxt("models_name.txt", dtype=str)
 mn = list(model_name)
-P_20 = np.loadtxt(forld+"20/seq_20fet_values.csv", delimiter = ",")
+P_20 = np.loadtxt(forld+"seq_20fet_values1.csv", delimiter = ",")
 P20 = P_20[:, 0:20]
-P_24 = np.loadtxt(forld+"24/seq_24fet_values.csv", delimiter = ",")
+P_24 = np.loadtxt(forld+"seq_24fet_values1.csv", delimiter = ",")
 P24 = P_24[:, 0:24]
-P_117 = np.loadtxt(forld+"117/seq_117fet_values.csv", delimiter = ",")
+P_117 = np.loadtxt(forld+"seq_117fet_values1.csv", delimiter = ",")
 P117 = P_117[:, 0:117]
 
 def prediction(P, n, nu):
@@ -51,7 +51,7 @@ for i in mn:
 j = j - 1
 
 asl = sum(al)/(j*15)
-sequence_name = np.loadtxt(forld + "test_name.txt", dtype = str)
+sequence_name = np.loadtxt("test_name.txt", dtype = str)
 sn = list(sequence_name)
 print("Sequnece_Name,Prediction_Scores")
 for i in range(0,len(sn)):
